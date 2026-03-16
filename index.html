@@ -17,41 +17,25 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" type="image/x-icon" href="assets/images/logo.jpg">
     
-    <title>OpenClaw 龍蝦升級伺料包 | FlyPig AI</title>
+    <title>OpenClaw 龍蝦升級飼料包 | FlyPig AI</title>
 </head>
 <body class="d-flex flex-column min-vh-100">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
+    <!-- Minimalist Navigation (Header only) -->
+    <nav class="navbar fixed-top">
+        <div class="container justify-content-center justify-content-lg-start">
             <a class="navbar-brand" href="https://flypigai.icareu.tw/">
-                <img src="assets/images/logo.jpg" alt="FlyPig AI Logo" width="40" height="40" style="border-radius: 50%; object-fit: cover;">
+                <img src="assets/images/logo.jpg" alt="FlyPig AI Logo" width="45" height="45" style="border-radius: 50%; object-fit: cover;">
                 <span>FlyPig AI</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link" href="https://flypigai.icareu.tw/">返回主站</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="index.html">龍蝦升級包</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://flypigai.icareu.tw/ai-collect">AI 工具集</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://flypigai.icareu.tw/#contact">聯絡我們</a></li>
-                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
-                        <a class="btn btn-primary btn-rounded" href="https://www.facebook.com/FlyPigAI" target="_blank">
-                            <i class="fab fa-facebook-f me-2"></i>追蹤 FlyPig FB
-                        </a>
-                    </li>
-                </ul>
-            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero-section text-center">
+    <header class="hero-section">
         <div class="container" data-aos="fade-up">
-            <h1 class="display-3 fw-bold mb-4">OpenClaw 龍蝦升級飼料包</h1>
-            <p class="lead mb-0 text-white opacity-90 mx-auto" style="max-width: 800px;">
+            <h1 class="display-3 fw-bold">OpenClaw 龍蝦升級飼料包</h1>
+            <p class="mx-auto mt-4">
                 專為 AI 系統架構師打造的技術模組庫。透過標準化的升級組件，<br>
                 顯著提升 AI 代理的執行精準度、自主性與協作能力。
             </p>
@@ -61,19 +45,9 @@
     <!-- Library Section -->
     <main id="library" class="pack-grid py-5">
         <div class="container">
-            <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="fw-bold mb-3">飼料包內容清單</h2>
-                <div class="h6 text-muted">請根據最低建議模型版本選用適當模組</div>
-            </div>
-
             <!-- Filter Navigation (Dynamic) -->
-            <div class="filter-nav" data-aos="fade-up">
+            <div class="filter-nav" data-aos="fade-up" data-aos-delay="100">
                 <!-- Buttons injected by main.js -->
-                <div class="placeholder-glow">
-                    <span class="placeholder col-2 rounded-pill py-3 mx-1"></span>
-                    <span class="placeholder col-2 rounded-pill py-3 mx-1"></span>
-                    <span class="placeholder col-2 rounded-pill py-3 mx-1"></span>
-                </div>
             </div>
 
             <!-- Packs Grid (Dynamic) -->
@@ -83,12 +57,12 @@
         </div>
     </main>
 
-    <!-- Modal (System A Style) -->
+    <!-- Modal (Premium Dark Style) -->
     <div class="modal fade" id="packModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-scrollable">
-            <div class="modal-content border-0 shadow-lg">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content border-0">
                 <div class="modal-header border-0">
-                    <h5 class="modal-title" id="modalTitle">技術規格詳情</h5>
+                    <h4 class="modal-title" id="modalTitle">技術規格詳情</h4>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -97,18 +71,34 @@
                     </div>
                 </div>
                 <div class="modal-footer border-0">
-                    <button type="button" class="btn btn-light btn-rounded px-4" data-bs-dismiss="modal">關閉視窗</button>
+                    <button type="button" class="btn btn-outline-light btn-rounded px-4" data-bs-dismiss="modal">關閉視鎖</button>
                     <button type="button" id="installGuideBtn" class="btn btn-primary btn-rounded px-4 d-none">安裝指南</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer py-5 mt-auto">
+    <!-- Enhanced Footnotes Navigation Footer -->
+    <footer class="footer mt-auto">
         <div class="container text-center">
-            <p class="mb-2">FlyPig AI - 專業的企業 AI 與 Martech 整合服務供應商</p>
-            <p class="text-muted small mb-0">&copy; 2026 FlyPig AI 開源. All rights reserved.</p>
+            
+            <div class="footer-nav mb-5" data-aos="fade-up">
+                <a href="https://flypigai.icareu.tw/" class="footer-link">返回主站</a>
+                <a href="index.html" class="footer-link active">龍蝦升級包</a>
+                <a href="https://flypigai.icareu.tw/ai-collect" class="footer-link">AI 工具集</a>
+                <a href="https://flypigai.icareu.tw/#contact" class="footer-link">聯絡我們</a>
+            </div>
+
+            <div class="footer-actions mb-5" data-aos="fade-up">
+                <a class="btn btn-fb" href="https://www.facebook.com/FlyPigAI" target="_blank">
+                    <i class="fab fa-facebook-f"></i> 追蹤 FlyPig FB
+                </a>
+            </div>
+
+            <div class="footer-info pt-4 border-top border-secondary opacity-50">
+                <p class="mb-2">FlyPig AI - 專業的企業 AI 與 Martech 整合服務供應商</p>
+                <p class="small mb-0">&copy; 2026 FlyPig AI 開源. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
