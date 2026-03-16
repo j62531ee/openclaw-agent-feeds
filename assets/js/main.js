@@ -146,9 +146,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function renderMarkdown(md) {
         if (typeof marked !== 'undefined') {
-            return marked.parse(md);
+            const renderer = new marked.Renderer();
+            
+            // Custom code block renderer
+            renderer.code = function(code, language) {
+                const escapedCode = code.replace(/&/g, '&amp;')
+                                       .replace(/</g, '&lt;')
+                                       .replace(/>/g, '&gt;')
+                                       .replace(/"/g, '&quot;')
+                                       .replace(/'/g, '&#39;');
+                
+                return `
+                    <div class="code-wrapper">
+                        <button class="copy-btn" onclick="window.app.copyToClipboard(this)">複製</button>
+                        <pre><code class="language-${language || ''}">${escapedCode}</code></pre>
+                    </div>
+                `;
+            };
+
+            return marked.parse(md, { renderer });
         }
         return md.replace(/\n\n/g, '<p></p>').replace(/\n/g, '<br>');
+    }
+
+    // Copy Tool
+    async function copyToClipboard(btn) {
+        const code = btn.nextElementSibling.querySelector('code').innerText;
+        try {
+            await navigator.clipboard.writeText(code);
+            const originalText = btn.innerText;
+            btn.innerText = '已複製';
+            btn.classList.add('copied');
+            
+            setTimeout(() => {
+                btn.innerText = originalText;
+                btn.classList.remove('copied');
+            }, 2000);
+        } catch (err) {
+            console.error('Failed to copy!', err);
+            btn.innerText = '失敗';
+        }
     }
 
     async function viewDetails(packId) {
@@ -191,5 +228,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Expose needed functions to global scope
-    window.app = { viewDetails, loadInstallGuide };
+    window.app = { viewDetails, loadInstallGuide, copyToClipboard };
 });
