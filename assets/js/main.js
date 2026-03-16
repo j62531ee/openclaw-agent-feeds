@@ -149,17 +149,21 @@ document.addEventListener('DOMContentLoaded', () => {
             const renderer = new marked.Renderer();
             
             // Custom code block renderer
-            renderer.code = function(code, language) {
-                const escapedCode = code.replace(/&/g, '&amp;')
-                                       .replace(/</g, '&lt;')
-                                       .replace(/>/g, '&gt;')
-                                       .replace(/"/g, '&quot;')
-                                       .replace(/'/g, '&#39;');
+            renderer.code = function(args, language) {
+                // Compatibility for different marked versions
+                let codeText = typeof args === 'string' ? args : args.text;
+                let lang = typeof args === 'string' ? language : args.lang;
+                
+                const escapedCode = codeText.replace(/&/g, '&amp;')
+                                           .replace(/</g, '&lt;')
+                                           .replace(/>/g, '&gt;')
+                                           .replace(/"/g, '&quot;')
+                                           .replace(/'/g, '&#39;');
                 
                 return `
                     <div class="code-wrapper">
                         <button class="copy-btn" onclick="window.app.copyToClipboard(this)">複製</button>
-                        <pre><code class="language-${language || ''}">${escapedCode}</code></pre>
+                        <pre><code class="language-${lang || ''}">${escapedCode}</code></pre>
                     </div>
                 `;
             };
