@@ -47,12 +47,20 @@ This project serves as a high-quality "Feed Buffet," allowing developers and arc
 
 ---
 
-## 快速開始 / Quick Start
+## 支持此專案 / Support This Project
 
-1. 訪問 [index.html](index.html) 或部署至靜態網站託管。
-2. 瀏覽飼料包列表，點擊「查看技術規格」。
-3. 根據文件指示複製指令餵食給您的 OpenClaw 代理。
+如果您覺得這個專案對您有幫助，歡迎請我喝杯咖啡支持持續開發！
+If you find this project helpful, feel free to buy me a coffee!
+
+<a href="https://buymeacoffee.com/mkhsu2002w" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 ---
 
-&copy; 2025 FlyPig AI - 艾可開發股份有限公司. All rights reserved.
+## 授權條款 / License
+
+本專案採用 **MIT 授權條款** 開放原始碼。詳細內容請參閱 [LICENSE](LICENSE) 檔案。
+This project is open-source under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+
+---
+
+&copy; 2026 FlyPig AI 開源專案. All rights reserved.
