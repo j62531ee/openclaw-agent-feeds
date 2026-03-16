@@ -1,13 +1,13 @@
-# AI SEO Content Factory
+# 🥦 [自動化] AI SEO 內容工廠 (AI SEO Content Factory)
 
-## Overview
-The AI SEO Content Factory is an industrial-scale content generation module. It integrates keyword research, semantic clustering, and high-authority writing styles to produce search-engine-optimized technical documentation and marketing articles that rank high on results pages.
+### 📄 檔案簡介
+本飼料包專為**高質量內容生產**設計。它不僅是生成文字，而是將搜尋引擎最看重的 **E-E-A-T (經驗、專業、權威、信任)** 邏輯深植於 AI 代理的寫作基因中。
 
-## Goal
-To automate the production of 50+ high-quality, SEO-optimized articles per week with a focus on technical authority and human-like readability.
+### 🚀 升級核心
+1. **反向金字塔寫作邏輯**：確保核心價值在第一時間呈現。
+2. **數據驅動論證**：強制代理在發表觀點前，必須檢索或引用具體數據。
+3. **語義標籤優化 (LSI)**：自動集成相關關鍵字，提升搜尋引擎排名。
 
-## Capability Improvement
-- **Semantic Clustering**: Groups keywords into high-relevance topic nodes.
-- **Authority Writing Filter**: Enforces E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) standards.
-- **Meta-Tag Optimization**: Automatically generates schema markup, meta descriptions, and alt-text.
-- **Internal Linking Strategy**: Suggests and implements an optimal silo structure for internal links.
+### 📋 建議模型
+- **頂級餵食**：Claude 3.5 Sonnet (文字細膩度極佳) / Gemini 1.5 Pro
+- **基礎餵食**：GPT-4o-mini

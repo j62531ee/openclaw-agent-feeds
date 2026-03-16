@@ -1,12 +1,13 @@
-# Autonomous Research Agent
+# 🧪 [自動化] 自主研究引擎 (Autonomous Research Engine)
 
-## Overview
-The Autonomous Research Agent is a high-level automation module that enables OpenClaw to perform comprehensive, multi-stage information gathering and synthesis. It independently discovers references, evaluates source credibility, and compiles structured intelligence reports.
+### 📄 檔案簡介
+本飼料包專為需要**深度資料挖掘**與**資訊驗證**的任務設計。它能將 AI 從單次的問答者轉變為一個具備「驗證與迭代」能力的研究員。
 
-## Goal
-To automate technical due diligence, market analysis, and academic literature reviews with minimal human guidance.
+### 🚀 升級核心
+1. **三階段驗證法**：檢索 -> 交叉比對 -> 衝突解決。
+2. **資訊來源分級**：自動區分學術、新聞、博客等不同信度的資訊源。
+3. **缺漏主動偵測**：當資訊不足以支撐結論時，主動發起新的補充搜尋。
 
-## Capability Improvement
-- **Recursive Source Discovery**: Automatically iterates through dynamic links and references.
-- **Credibility Scoring Engine**: Evaluates source reliability based on peer-reviewed status and domain authority.
-- **Synthesis Engine**: Aggregates disparate data points into cohesive executive summaries.
+### 📋 建議模型
+- **頂級餵食**：Gemini 1.5 Pro / GPT-4o
+- **基礎餵食**：Gemini 1.5 Flash

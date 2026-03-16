@@ -1,13 +1,13 @@
-# Multi-Agent Coordinator
+# 🧬 [核心升級] 多代理協作調度員 (Multi-Agent Orchestrator)
 
-## Overview
-The Multi-Agent Coordinator is an orchestration module that allows a lead OpenClaw agent to manage complex, multi-faceted projects by delegating tasks to specialized sub-agents. It handles context synchronization, conflict resolution, and hierarchical task distribution.
+### 📄 檔案簡介
+本飼料包專為**複雜專案管理**與**多角色協作**場景設計。它能讓一個主代理具備「領袖思維」，有效地將任務拆解並分配給不同的專門代理。
 
-## Goal
-To enable OpenClaw to solve large-scale problems that exceed the context window or capability set of a single monolithic agent.
+### 🚀 升級核心
+1. **任務分配矩陣**：根據任務難度與性質自動匹配最適路徑。
+2. **代理間通訊協議 (Inter-Agent Protocol)**：統一代理間的資訊傳遞格式，避免丟失上下文。
+3. **衝突仲裁機制**：當多個代理產出衝突時，提供標準化的決策與修訂路徑。
 
-## Capability Improvement
-- **Hierarchical Delegation**: Breaks down a complex goal into sub-tasks for specific worker agents.
-- **Context Synchronization**: Maintains a shared memory state across the entire agent swarm.
-- **Conflict Resolution**: Resolves overlapping or contradictory outputs from different sub-agents.
-- **Parallel Execution**: Orchestrates multiple sub-agents simultaneously for improved throughput.
+### 📋 建議模型
+- **頂級餵食**：Gemini 1.5 Pro (長上下文處理與調度能力極佳)
+- **基礎餵食**：GPT-4o
