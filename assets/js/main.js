@@ -34,7 +34,15 @@ document.addEventListener('DOMContentLoaded', () => {
             renderPacks();
         })
         .catch(err => {
-            grid.innerHTML = `<div class="col-12 text-center py-5"><div class="alert alert-danger">${err.message}</div></div>`;
+            console.error("Error loading packs:", err);
+            grid.innerHTML = `
+                <div class="col-12 text-center py-5">
+                    <div class="alert alert-warning d-inline-block">
+                        <i class="fas fa-exclamation-triangle me-2"></i> 
+                        數據載入失敗。如果您是直接開啟 HTML 檔案，請改用 <strong>Live Server</strong> 或任何本地伺服器開啟以支援數據請求。
+                    </div>
+                </div>
+            `;
         });
 
     // 5. Renderers

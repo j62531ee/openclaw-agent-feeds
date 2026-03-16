@@ -73,7 +73,7 @@ body::before {
 
 /* Hero Section - High Focus */
 .hero-section {
-    padding: 160px 0 80px;
+    padding: 160px 0 40px;
     background: transparent;
     text-align: center;
 }
@@ -85,6 +85,7 @@ body::before {
     margin-bottom: 1.5rem;
     background: linear-gradient(135deg, #fff 0%, #38bdf8 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -101,18 +102,20 @@ body::before {
     display: flex;
     justify-content: center;
     gap: 12px;
-    margin: 3rem 0;
+    margin: 1.5rem 0 3rem;
+    flex-wrap: wrap;
 }
 
 .filter-btn {
     background: var(--bg-accent);
     color: var(--text-muted);
     border: 1px solid var(--border-color);
-    padding: 12px 28px;
+    padding: 10px 24px;
     border-radius: 50rem;
     font-weight: 600;
     font-size: 0.95rem;
     transition: var(--transition-premium);
+    white-space: nowrap;
 }
 
 .filter-btn:hover {
@@ -188,7 +191,7 @@ body::before {
 }
 
 .service-card p {
-    color: var(--text-muted);
+    color: #cbd5e1;
     font-size: 0.95rem;
     margin-bottom: 2rem;
 }
