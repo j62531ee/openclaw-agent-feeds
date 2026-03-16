@@ -1,6 +1,4 @@
-# OpenClaw Agent Feeds - v0.1
-
-### 🚀 Official Website: [https://openclawfeeds.icareu.tw/](https://openclawfeeds.icareu.tw/)
+# OpenClaw Agent Feeds - v0.2 (2026Q1)
 
 ### 🦞 Project Philosophy: What is "Lobster Feed"?
 In the OpenClaw ecosystem, AI Agents are affectionately referred to as **"Lobsters."** Consequently, **"Lobster Feeds"** are high-level, modular **Prompt Templates** that have been rigorously fine-tuned and architected.
@@ -59,7 +57,7 @@ This project serves as a high-quality "Feed Buffet," allowing developers and arc
 - **Threat Intel Monitor** `[Advanced]` - [Overview](feeds/threat-intel-monitor/overview.md) | [Install Guide](feeds/threat-intel-monitor/installation_guide.md)
 
 ---
-
+### 🚀 Official Website: [https://openclawfeeds.icareu.tw/](https://openclawfeeds.icareu.tw/)
 [中文版本](README.zh-TW.md) | [MIT License](LICENSE)
 
 &copy; 2026 FlyPig AI Open Source Project. All rights reserved.
