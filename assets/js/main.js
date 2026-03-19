@@ -102,10 +102,38 @@ document.addEventListener('DOMContentLoaded', () => {
         const navContact = document.getElementById('nav-contact');
         const navFb = document.getElementById('nav-fb');
 
-        if (navHome) navHome.innerText = isEn ? 'Home' : '返回主站';
-        if (navGuide) navGuide.innerText = isEn ? 'OpenClaw Guide' : 'OpenClaw實戰指南';
-        if (navCollect) navCollect.innerText = isEn ? 'AI Collect' : 'AI 工具集';
-        if (navContact) navContact.innerText = isEn ? 'Contact' : '聯絡我們';
+        if (isEn) {
+            if (navHome) navHome.style.display = 'none';
+            if (navContact) navContact.style.display = 'none';
+            if (navGuide) {
+                navGuide.innerText = 'AI Survival Secrets';
+                navGuide.href = 'https://northpath.insightestate.ca/products/';
+            }
+            if (navCollect) {
+                navCollect.innerText = 'OpenClaw Tutorials';
+                navCollect.href = 'https://northpath.insightestate.ca/openclaw/';
+            }
+        } else {
+            if (navHome) {
+                navHome.style.display = 'block';
+                navHome.innerText = '返回主站';
+                navHome.href = 'https://flypigai.icareu.tw/';
+            }
+            if (navContact) {
+                navContact.style.display = 'block';
+                navContact.innerText = '聯絡我們';
+                navContact.href = 'https://flypigai.icareu.tw/#contact';
+            }
+            if (navGuide) {
+                navGuide.innerText = 'OpenClaw實戰指南';
+                navGuide.href = 'https://flypigai.icareu.tw/openclaw-ai-agent-guide';
+            }
+            if (navCollect) {
+                navCollect.innerText = 'AI 工具集';
+                navCollect.href = 'https://flypigai.icareu.tw/ai-collect';
+            }
+        }
+        
         if (navFb) navFb.innerHTML = `<i class="fab fa-facebook-f me-2"></i> ${isEn ? 'Follow FB' : '追蹤 FlyPig FB'}`;
     }
 
@@ -168,7 +196,6 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.classList.toggle('active', btn.getAttribute('data-level') === currentLevel);
         });
     }
-
     function renderPacks() {
         const filtered = allPacks.filter(p => {
             const matchesCat = currentCategory === '全部' || p.category === currentCategory;
@@ -186,6 +213,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         grid.innerHTML = filtered.map((pack, index) => {
             const isEn = currentLang === 'en';
+            const packName = isEn && pack.name_en ? pack.name_en : pack.name;
+            const packDesc = isEn && pack.description_en ? pack.description_en : pack.description;
+
             return `
                 <div class="col-md-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-delay="${(index % 4) * 100}">
                     <article class="service-card shadow-sm h-100">
@@ -193,8 +223,8 @@ document.addEventListener('DOMContentLoaded', () => {
                             <span class="category-badge">${isEn ? translateCategory(pack.category) : pack.category}</span>
                             <span class="badge ${getLevelClass(pack.level)}">${isEn ? translateLevel(pack.level) : pack.level}</span>
                         </div>
-                        <h3 class="h5 fw-bold mb-3">${pack.name}</h3>
-                        <p class="text-muted small mb-4 flex-grow-1">${pack.description}</p>
+                        <h3 class="h5 fw-bold mb-3">${packName}</h3>
+                        <p class="text-muted small mb-4 flex-grow-1">${packDesc}</p>
                         <button onclick="window.app.viewDetails('${pack.id}')" class="btn-view-spec w-100">
                             ${isEn ? 'View Technical Spec' : '查看技術規格'}
                         </button>
@@ -304,7 +334,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!pack) return;
 
         const isEn = currentLang === 'en';
-        modalTitle.innerText = pack.name;
+        modalTitle.innerText = isEn && pack.name_en ? pack.name_en : pack.name;
         modalContent.innerHTML = '<div class="loading-overlay"><div class="spinner-border text-primary" role="status"></div></div>';
         installGuideBtn.classList.add('d-none');
         installGuideBtn.innerText = isEn ? 'Installation Guide' : '安裝指南';

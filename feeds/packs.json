@@ -2,216 +2,270 @@
   {
     "id": "deterministic-framework",
     "name": "龍蝦確定性代理框架",
+    "name_en": "OpenClaw Deterministic Framework",
     "category": "核心代理升級",
     "description": "為複雜決策實施嚴格的邏輯分支與可重複執行路徑，確保執行的一致性。",
+    "description_en": "Implements strict logical branching and repeatable execution paths for complex decision-making, ensuring consistency.",
     "path": "deterministic-framework/",
     "level": "專家"
   },
   {
     "id": "hallucination-guardrails",
     "name": "反幻覺邏輯護欄",
+    "name_en": "Hallucination Guardrails",
     "category": "核心代理升級",
     "description": "實施多層交叉驗證，消除 AI 輸出中的事實錯誤與無根據聲明。",
+    "description_en": "Implements multi-layer cross-validation to eliminate factual errors and unfounded claims in AI outputs.",
     "path": "hallucination-guardrails/",
     "level": "入門"
   },
   {
     "id": "tool-driven-state",
     "name": "工具驅動狀態機",
+    "name_en": "Tool-Driven State Machine",
     "category": "核心代理升級",
     "description": "將代理邏輯轉化為穩健的狀態機，由特定工具輸出與傳感器數據驅動。",
+    "description_en": "Transforms agent logic into robust state machines driven by specific tool outputs and sensor data.",
     "path": "tool-driven-state/",
     "level": "入門"
   },
   {
     "id": "autonomous-research",
     "name": "自主研究代理",
+    "name_en": "Autonomous Research Agent",
     "category": "自動化擴展包",
     "description": "端到端的多源數據收集、綜合與報告生成，無需人工干預。",
+    "description_en": "End-to-end multi-source data collection, synthesis, and report generation without human intervention.",
     "path": "autonomous-research/",
     "level": "進階"
   },
   {
     "id": "ai-seo-factory",
     "name": "AI SEO 內容工廠",
+    "name_en": "AI SEO Content Factory",
     "category": "自動化擴展包",
     "description": "利用關鍵字優化、高權威性的技術指標與文章，實現大規模內容生產。",
+    "description_en": "Scales content production using keyword optimization and high-authority technical metrics.",
     "path": "ai-seo-factory/",
     "level": "進階"
   },
   {
     "id": "affiliate-marketing-auto",
     "name": "聯盟行銷自動化",
+    "name_en": "Affiliate Marketing Auto",
     "category": "自動化擴展包",
     "description": "自動化產品分析、連結生成與多通路內容分發，優化轉化率。",
+    "description_en": "Automates product analysis, link generation, and multi-channel content distribution to optimize conversion rates.",
     "path": "affiliate-marketing-auto/",
     "level": "入門"
   },
   {
     "id": "software-builder",
     "name": "軟體專案架構代理",
+    "name_en": "Software Project Architect",
     "category": "開發者工具包",
     "description": "根據架構說明書自動搭建、實施並記錄完整的軟體模組。",
+    "description_en": "Automatically builds, implements, and documents complete software modules based on architectural specs.",
     "path": "software-builder/",
     "level": "入門"
   },
   {
     "id": "code-debugger",
     "name": "代碼除錯代理",
+    "name_en": "Code Debugger Agent",
     "category": "開發者工具包",
     "description": "自動化追蹤分析、錯誤定位與關鍵任務系統的修正更新。",
+    "description_en": "Automates trace analysis, bug localization, and corrective updates for mission-critical systems.",
     "path": "code-debugger/",
     "level": "入門"
   },
   {
     "id": "doc-generator",
     "name": "文檔自動生成器",
+    "name_en": "Doc Generator",
     "category": "開發者工具包",
     "description": "從源代碼中提取邏輯模式，生成全面的 API 參考與系統導覽。",
+    "description_en": "Extracts logical patterns from source code to generate comprehensive API references and system guides.",
     "path": "doc-generator/",
     "level": "入門"
   },
   {
     "id": "market-research",
     "name": "市場研究自動化",
+    "name_en": "Market Research Auto",
     "category": "商業智能包",
     "description": "即時監控市場趨勢、消費者情緒與宏觀經濟指標。",
+    "description_en": "Real-time monitoring of market trends, consumer sentiment, and macroeconomic indicators.",
     "path": "market-research/",
     "level": "進階"
   },
   {
     "id": "competitive-intel",
     "name": "競爭情報代理",
+    "name_en": "Competitive Intel Agent",
     "category": "商業智能包",
     "description": "自動化監控與分析競品功能差距與策略轉型。",
+    "description_en": "Automates monitoring and analysis of competitor feature gaps and strategic pivots.",
     "path": "competitive-intel/",
     "level": "進階"
   },
   {
     "id": "data-collection",
     "name": "數據採集代理",
+    "name_en": "Data Collection Agent",
     "category": "商業智能包",
     "description": "分佈式爬蟲與 API 整合器，用於大規模結構化數據提取。",
+    "description_en": "Distributed crawlers and API integrators for large-scale structured data extraction.",
     "path": "data-collection/",
     "level": "入門"
   },
   {
     "id": "multi-agent-coord",
     "name": "多代理協作調度員",
+    "name_en": "Multi-Agent Orchestrator",
     "category": "核心代理升級",
     "description": "調度專業化子代理之間的複雜工作流，實現層次化的任務分配。",
+    "description_en": "Orchestrates complex workflows between specialized sub-agents for hierarchical task allocation.",
     "path": "multi-agent-coord/",
     "level": "專家"
   },
   {
     "id": "data-analysis-flow",
     "name": "數據分析工作流",
+    "name_en": "Data Analysis Flow",
     "category": "商業智能包",
     "description": "自動化原始數據集的清洗、統計建模與視覺化流水線。",
+    "description_en": "Automates raw dataset cleaning, statistical modeling, and visualization pipelines.",
     "path": "data-analysis-flow/",
     "level": "進階"
   },
   {
     "id": "semantic-memory-boost",
     "name": "語義記憶增強器",
+    "name_en": "Semantic Memory Boost",
     "category": "核心代理升級",
     "description": "增強型 RAG 架構，用於長期知識保留與精確的向量檢索。",
+    "description_en": "Enhanced RAG architecture for long-term knowledge retention and precise vector retrieval.",
     "path": "semantic-memory-boost/",
     "level": "入門"
   },
   {
     "id": "protocol-enforcer",
     "name": "系統協議執行官",
+    "name_en": "Protocol Enforcer",
     "category": "核心代理升級",
     "description": "嚴格監控代理邏輯內的安全性協議與架構標準合規性。",
+    "description_en": "Strictly monitors security protocols and architectural compliance within agent logic.",
     "path": "protocol-enforcer/",
     "level": "專家"
   },
   {
     "id": "lead-gen-automation",
     "name": "潛在客戶自動開發",
+    "name_en": "Lead Gen Automation",
     "category": "自動化擴展包",
     "description": "透過社交與網路分析，自動識別並接觸高價值潛在客戶。",
+    "description_en": "Automatically identifies and engages high-value leads through social and network analysis.",
     "path": "lead-gen-automation/",
     "level": "入門"
   },
   {
     "id": "social-content-engine",
     "name": "社群內容流量引擎",
+    "name_en": "Social Content Engine",
     "category": "自動化擴展包",
     "description": "病毒式趨勢分析，自動生成平台特定的病毒式內容模組。",
+    "description_en": "Viral trend analysis and automated generation of platform-specific viral content modules.",
     "path": "social-content-engine/",
     "level": "入門"
   },
   {
     "id": "test-suite-architect",
     "name": "測試套件架構師",
+    "name_en": "Test Suite Architect",
     "category": "開發者工具包",
     "description": "根據系統需求自動生成單元、集成與 E2E 測試案例。",
+    "description_en": "Automatically generates unit, integration, and E2E test cases based on system requirements.",
     "path": "test-suite-architect/",
     "level": "入門"
   },
   {
     "id": "threat-intel-monitor",
     "name": "威脅情報監控員",
+    "name_en": "Threat Intel Monitor",
     "category": "商業智能包",
     "description": "持續掃描生態系統中的網絡安全漏洞與新興數位威脅。",
+    "description_en": "Continuously scans for cybersecurity vulnerabilities and emerging digital threats within the ecosystem.",
     "path": "threat-intel-monitor/",
     "level": "進階"
   },
   {
     "id": "visual-auditor",
     "name": "視覺內容審計代理",
+    "name_en": "Visual Auditor Agent",
     "category": "多模態與安全性",
     "description": "自動化 UI/UX 與視覺設計合規性檢查，具備多模態像素級分析能力。",
+    "description_en": "Automates UI/UX and visual design compliance checks with multimodal pixel-level analysis.",
     "path": "visual-auditor/",
     "level": "進階"
   },
   {
     "id": "voice-to-logic",
     "name": "語音指令邏輯提取器",
+    "name_en": "Voice-to-Logic Extractor",
     "category": "多模態與安全性",
     "description": "優化口語輸入，將模糊的語音記錄轉化為精確的結構化執行指令。",
+    "description_en": "Optimizes verbal input by converting fuzzy voice notes into precise structured execution commands.",
     "path": "voice-to-logic/",
     "level": "入門"
   },
   {
     "id": "pii-masking",
     "name": "PII 自動脫敏護欄",
+    "name_en": "PII Masking Guardrails",
     "category": "多模態與安全性",
     "description": "在處理任務時自動識別並隱藏敏感個人資訊，確保 2026 年隱私法規合規性。",
+    "description_en": "Automatically identifies and hides sensitive personal information to ensure 2026 privacy compliance.",
     "path": "pii-masking/",
     "level": "專家"
   },
   {
     "id": "global-compliance",
     "name": "跨國合規執行包裹器",
+    "name_en": "Global Compliance Wrapper",
     "category": "多模態與安全性",
     "description": "內建全球主要法規邏輯標記，引導代理在合法邊界內執行任務。",
+    "description_en": "Built-in regulatory logic markers for global standards, guiding agents within legal boundaries.",
     "path": "global-compliance/",
     "level": "專家"
   },
   {
     "id": "legal-precision",
     "name": "法律條文精算師",
+    "name_en": "Legal Precision Analyst",
     "category": "垂直專業領域",
     "description": "深度合約邏輯分析與風險模擬，提供法律層面的極限邊界測試。",
+    "description_en": "Deep contract logic analysis and risk simulation for extreme legal boundary testing.",
     "path": "legal-precision/",
     "level": "專家"
   },
   {
     "id": "medical-research",
     "name": "醫學文獻與藥理綜述助手",
+    "name_en": "Medical Research Pro",
     "category": "垂直專業領域",
     "description": "結合專業醫學數據庫邏輯，實現精準的生醫文獻綜述與數據對比。",
+    "description_en": "Combines professional medical database logic for precise biomedical literature reviews and data comparison.",
     "path": "medical-research/",
     "level": "專家"
   },
   {
     "id": "intent-clarifier",
     "name": "意圖深度釐清器",
+    "name_en": "Deep Intent Clarifier",
     "category": "核心代理升級",
     "description": "在指令模糊時主動生成假設性選項，透過高層次交互消除執行偏差。",
+    "description_en": "Proactively generates hypothetical scenarios to eliminate execution bias when instructions are ambiguous.",
     "path": "intent-clarifier/",
     "level": "進階"
   }
