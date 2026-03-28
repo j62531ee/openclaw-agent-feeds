@@ -1,13 +1,17 @@
-# 🥦 [Automation] AI SEO Content Factory
+# 🥦 [Mutation Feed] AI SEO Content Factory
 
-### 📄 File Overview
-This feed pack is designed for **high-quality content production**. It doesn't just generate text; it deeply embeds the **E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness)** logic, which search engines value most, into the AI agent's writing DNA.
+### 📄 Module Overview
+This feed pack (Mutation Feed) is designed for **safely automating the production of high-ranking content**. Rather than just generating text, it embeds the critical SEO logic of **E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness)** and strict file operation guardrails deep into the AI agent's workflow. This is a standardized business workflow SOP controller.
 
-### 🚀 Core Enhancements
-1. **Inverted Pyramid Writing Logic**: Ensures core value is presented immediately.
-2. **Data-Driven Argumentation**: Forces the agent to retrieve or cite specific data before expressing a viewpoint.
-3. **Latent Semantic Indexing (LSI) Optimization**: Automatically integrates relevant keywords to improve search engine rankings.
+### ⚙️ Skill Synergy
+- **Recommended Skills**: `search_web`, `read_url`, `write_to_file`
+- **Synergy Effect**: Before generating content, the agent is forced to call Search skills to investigate references and analyze competitors. Once generated, the output is safely written to the specified project directory via controlled file-writing tools.
+
+### 🚀 Mutation Target & Protocol
+1. **Research Before Writing (Inspect First)**: Enforces a three-step process of "Keyword Search -> Competitor Analysis -> SEO Structure Planning", strictly prohibiting blind writing.
+2. **Safe Writing (Verify After Edit)**: The generated Markdown file must pass an SEO self-check (e.g., heading density, word count). If it fails, the agent must proactively rewrite it to prevent low-quality content from entering the workspace.
+3. **E-E-A-T Validation**: Forces the agent to audit whether the article contains credible data citations and clear professional insights.
 
 ### 📋 Recommended Models
-- **Recommended**: GPT-5.3 / Gemini 3.0 Pro / Claude Sonnet 4.6
-- **Minimum**: GPT-5.1 / Gemini 3.1 Flash / Claude Haiku 4.5 (2026 Gen)
+- **Recommended**: Gemini 3.0 Pro / GPT-5.3 / Claude Sonnet 4.6
+- **Minimum**: Gemini 3.1 Flash / GPT-5.1

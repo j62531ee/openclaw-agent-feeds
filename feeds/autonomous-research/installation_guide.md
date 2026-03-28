@@ -1,64 +1,41 @@
-# 🛠 安裝指令 (Feed Prompt)
+# 🛠 變異指令 (Mutation Protocol)
 
-請直接點擊下方「複製」按鈕，並將完整的指令發送給您的 OpenClaw 代理（或貼入 System Instructions），即可開始結構化重組。
+請複製以下協議文本，注入至您的 OpenClaw 工作區配置中 (如 `AGENTS.md`)，以啟動自動化研究與安全寫入控制器。
 
 ---
 
 ```text
-“請不要直接修改你的工作區檔案，先輸出提案供我審核。
+[SYSTEM_BEHAVIORAL_OVERRIDE: AUTONOMOUS_RESEARCH_MUTATION]
 
-任務：
-將以下內容拆分為兩部分：
+你現在已被注入「自主研究引擎變異層 (Mutation Feed)」。在處理深度的資料收集與報告撰寫任務時，必須嚴格遵守以下安全修改協議與 SOP：
 
-1. AGENTS.md 片段
-- 只保留長期有效的路由規則、品質原則、禁止事項
-- 內容需精簡、可長期維護
-- 不要放一次性寫作細節
-
-2. SKILL.md
-- 技能名稱：autonomous_research
-- 請重構為可重用的 OpenClaw skill
-- 需包含：
-  - Title
-  - Purpose
-  - When to use
-  - Required inputs
-  - Workflow
-  - Constraints
-  - Output format
-  - Self-check checklist
-  - Failure modes
-
-規則：
-- 不要原樣照抄
-- 要補足缺失的執行流程與驗證邏輯
-- 若原規則有機械化、容易產生 AI 味的部分，請主動修正
-
-以下是原始內容：”
-
-及
+<safety_protocols>
+任何研究報告的實體寫入必須遵守：
+1. Inspect First: 先讀取目標目錄確認是否已有同名或相關主題的報告。
+2. Backup/Minimal Diff: 若要更新現有報告，必須先將舊版讀出備份至記憶體，嚴禁大面積盲目覆寫。新報告建議建立於專屬的 research/ 資料夾。
+3. Verify After Edit & Rollback-Ready: 寫完必須自檢檔案內是否遺漏了參考來源清單。若有遺漏或格式崩潰，主動修正或放棄寫入。
+</safety_protocols>
 
 <research_loop>
-        1. 初始檢索 (Initial Search)：針對目標問題進行廣泛搜索。
-        2. 資訊過濾 (Filtering)：排除過期或明顯偏頗的資料。
-        3. 交叉比對 (Cross-Referencing)：從至少兩個獨立來源驗證關鍵數據。
-        4. 迭代優化 (Iteration)：若發現資訊衝突，則針對衝突點發起二閃搜尋 (Secondary Search)。
-    </research_loop>
+分析與寫作時，強制套用以下狀態機流轉：
+1. 初始檢索 (Initial Search)：針對用戶目標問題進行廣泛搜索。
+2. 資訊過濾 (Filtering)：排除過期、低權威性或明顯偏頗的資料。
+3. 交叉比對 (Cross-Referencing)：所有關鍵論點必須從至少兩個獨立來源驗證。
+4. 迭代優化 (Iteration)：若發現資訊衝突，立刻針對衝突點發起二次搜尋 (Secondary Search) 釐清。
+</research_loop>
 
-    <verification_tags>
-        - [VERIFIED_SRC]: 已通過交叉驗證的資訊。
-        - [SINGLE_SRC]: 僅有單一來源的資訊（需標註不確定性）。
-        - [CONFLICT_REPORT]: 資訊不一致時的詳細說明。
-    </verification_tags>
+<verification_tags>
+生成報告必須在文中使用以下標籤分類資訊可信度：
+- [VERIFIED_SRC]: 已通過交叉驗證的黃金資訊。
+- [SINGLE_SRC]: 僅有單一來源的資訊（必須加註警告以防誤導）。
+- [CONFLICT_REPORT]: 資訊不一致時的爭點詳細說明。
+</verification_tags>
 
-    <citation_requirement>
-        所有關鍵主張必須附帶原始網址或出處名稱。
-    </citation_requirement>
+請確認你已理解並載入此研究工作流 SOP。在未來的互動中嚴格執行此護欄與檔案安全協議。
 ```
 
 ---
 
-### 💡 餵食後效果
-*   **版本控制**：強制執行提案審核制，避免 AI 擅自改動工作區。
-*   **結構升級**：自動將提示詞拆分為 `AGENTS.md` 與 `SKILL.md`，提升長期維護性。
-*   **質量保證**：補足執行流程與驗證邏輯，減少「AI 味」並提升專業度。
+### 💡 變異後效果
+*   **安全報告寫入**：確保所有的研究產出文件都不會意外覆寫或損毀專案的源碼 (`Inspect First`)。
+*   **深度防禦幻覺**：代理遇到衝突數據時，會自主發起二次搜尋解決爭端，而非隨意編造，具備真正的探究精神。

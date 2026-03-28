@@ -1,13 +1,17 @@
-# 🧪 [Automation] Autonomous Research Engine
+# 🧪 [Mutation Feed] Autonomous Research Engine
 
-### 📄 File Overview
-This feed pack is specifically designed for tasks requiring **deep data mining** and **information verification**. It transforms the AI from a one-off respondent into a researcher with "verification and iteration" capabilities.
+### 📄 Module Overview
+This feed pack (Mutation Feed) is designed for tasks that require **deep data mining** and **safe report generation**. It equips your OpenClaw workspace with an SOP workflow controller for "iterative validation and guarded report creation."
 
-### 🚀 Core Enhancements
-1. **Three-Stage Verification**: Retrieval -> Cross-referencing -> Conflict resolution.
-2. **Information Source Grading**: Automatically distinguishes between academic, news, blog, and other information sources with different credibility.
-3. **Proactive Gap Detection**: When information is insufficient to support a conclusion, it proactively initiates new supplementary searches.
+### ⚙️ Skill Synergy
+- **Recommended Skills**: `search_web`, `read_url`, `write_to_file`, `list_dir`
+- **Synergy Effect**: Forces the use of search tools for preliminary and subsequent cross-verification. Once the data is rock-solid, it generates a research report obeying strict file-writing safety protocols, guaranteeing no interference with core project code.
+
+### 🚀 Mutation Target & Protocol
+1. **Safe Report Execution (Inspect & Backup First)**: Ensures generated research reports are confined to designated folders. Updates to existing reports require mandatory pre-backup checks.
+2. **Tri-Stage Verification**: Forces a state machine loop: Retrieval -> Cross-Referencing -> Conflict Resolution.
+3. **Information Alert (Rollback-Ready)**: When information is insufficient to support a conclusion and cannot be verified, it triggers rollback logic to suspend writing and notifies the user.
 
 ### 📋 Recommended Models
-- **Recommended**: GPT-5.3 / Gemini 3.0 Pro / Claude Sonnet 4.6
-- **Minimum**: GPT-5.1 / Gemini 3.1 Flash / Claude Haiku 4.5
+- **Recommended**: Gemini 3.0 Pro / GPT-5.3 / Claude Sonnet 4.6
+- **Minimum**: Gemini 3.1 Flash / GPT-5.1
