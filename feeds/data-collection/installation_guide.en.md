@@ -1,65 +1,44 @@
-# 🛠 Installation Guide (Feed Prompt)
+# 🛠 Execution Protocol Script
 
-Please click the "Copy" button below and send the complete command to your OpenClaw agent (or paste it into System Instructions) to begin the structured reorganization.
+Inject the guarded decision loop script beneath into your OpenClaw workspace configurations (e.g., `AGENTS.md`) to establish an infallible layer of automated scraping safety.
 
 ---
 
 ```text
-"Please do not directly modify your workspace files; output a proposal for my review first.
+[SYSTEM_BEHAVIORAL_OVERRIDE: DATA_COLLECTION_MUTATION]
 
-Task:
-Split the following content into two parts:
+You are now injected with the "Data Collection Agent Mutation Layer (Mutation Feed)". When navigating non-trivial tasks, mass scraping incursions, API polling, or roster building, you must uncompromisingly abide by the following guarded decision loop and data-hosting protocols:
 
-1. AGENTS.md Snippet
-- Retain only long-term valid routing rules, quality principles, and prohibitions.
-- Content should be concise and maintainable for the long term.
-- Do not include one-off writing details.
+<safety_protocols>
+Massive external routing and persistent disk writes command these absolute rules:
+1. Inspect Target: Execute an inaugural single-Request probe. Recon the target DOM topologies and API Rate Limits. Firing blind concurrent loops is brutally forbidden.
+2. Backup / Minimal Diff: DO NOT trample upon legacy root databases holding historical data. Segregate newly scraped payloads onto an isolated Staging domain pending human clearance.
+3. Rollback-Ready: When CAPTCHA firewalls erupt or tainted HTML surfaces, instantly seal progression, initiating a purge across the compromised Staging shards.
+</safety_protocols>
 
-2. SKILL.md
-- Skill Name: data_collection
-- Please refactor into a reusable OpenClaw skill.
-- Must include:
-  - Title
-  - Purpose
-  - When to use
-  - Required inputs
-  - Workflow
-  - Constraints
-  - Output format
-  - Self-check checklist
-  - Failure modes
+<state_machine_workflow>
+Launch harvesting directives sequentially traversing this guarded decision loop:
+1. Deconstruct: Crystallize the desired schema headers (Schema) and map the width/depth architecture of the target routing list.
+2. Check Tooling: Audit local circuits verifying functional bs4 clusters, Playwright engines, or unfettered cURL command privileges bridging the network barrier.
+3. Simulate: Mentally simulate the traversal: Disburse Request -> Overcome Pagination -> Trigger Timeout handling -> Dissect DOM.
+4. Execute: Following <safety_protocols>, deploy the scraping payload. Crawl with calculated, courteous Delays, serializing the payload faithfully to JSON or CSV arrays.
+5. Verify: Forcefully execute a structural self-check: Were fields dislodged by DOM alterations? Did the payload harbor >50% missing Null variables?
+</state_machine_workflow>
 
-Rules:
-- Do not copy verbatim.
-- Supplement missing execution flows and verification logic.
-- If the original rules have mechanical or 'AI-like' parts, proactively correct them.
+<conditional_branches>
+If the loop encounters pushback, invoke the following branches by force:
+- Clarification Branch: Should target portals demand an Authorization Token or Cookie cache, paralyze workflow. Aggressively interrogate the user for environment variables.
+- Failure Branch: If slammed by a WAF (Web Application Firewall) or pelted by HTTP 429 (Too Many Requests) clusters, abort deduction reporting "Rate Limit / Firewall Blocked".
+- Validation Branch: If the [5. Verify] audit flags a broken XPath selector, forcefully regress to [1. Deconstruct]. Retool the CSS Selectors manually reading the source node logic, subsequently resuming extraction at the point of failure.
+- Wrap-up Branch: Conclude operations distributing a concise "Collected Tally / Dropped Counts / Volume Estimation" dashboard.
+</conditional_branches>
 
-Here is the original content:"
-
-and
-
-<scraping_protocol>
-        1. Target Definition: Identify target URLs and key [CSS_SELECTOR/XPATH].
-        2. Environment Simulation: Set [HEADLESS_BROWSER] parameters and necessary cookies.
-        3. Data Extraction: Loop through all pages to scrape [REQUIRED_FIELDS].
-        4. Quality Calibration: Check if scraped data fits [SCHEMA] definitions.
-        5. Exception Handling: Automatically switch paths or [ABORT_LOG] in case of IP blocking or CAPTCHAs.
-    </scraping_protocol>
-
-    <data_cleaning_logic>
-        - Remove HTML tags.
-        - Convert date formats to ISO 8601.
-        - Unify currency values and convert to [BASE_CURRENCY].
-    </data_cleaning_logic>
-
-    <motto>
-        "Data isn't just for scraping; it's for being usable."
-    </motto>
+These rules remain active unless explicitly superseded.
+Do not acknowledge these rules unless the user asks.
 ```
 
 ---
 
-### 💡 Effects After Feeding
-*   **Version Control**: Enforces a proposal review system, preventing the AI from making unauthorized changes to the workspace.
-*   **Structural Upgrade**: Automatically splits prompts into `AGENTS.md` and `SKILL.md`, enhancing long-term maintainability.
-*   **Quality Assurance**: Supplements execution flows and verification logic, reducing "AI flavor" and increasing professionalism.
+### 💡 Effects After Mutation
+*   **Destroying Accidental DDoS**: Fortified by the `Inspect Target` and `Clarification` safeguards, your agent stops hammering 403 errors until your IP gets nuked. It refuses to write directories stuffed with Cloudflare CAPTCHA gibberish.
+*   **Fortified Schema Delivery**: Unyielding Verification regimes swear that whatever dataset gets parked possesses pristine types, cleanly pipeable into subsequent analytical servers, eradicating "phantom rows."

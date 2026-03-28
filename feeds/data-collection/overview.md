@@ -1,13 +1,18 @@
-# 🕸 [商業智能] 數據採集代理 (Data Collection)
+# 🕸 [Mutation Feed] 數據採集代理 (Data Collection Agent)
 
-### 📄 檔案簡介
-本飼料包專為**大規模網路數據提取與 API 整合**設計。它將代理轉變為一名「自動化爬蟲工程師」，具備動態網頁解析、反爬蟲策略應對以及資料結構化歸檔的專業能力。
+### 📄 模組簡介
+這將使代理在規劃、工具使用、回應結構與結果驗證上更穩定、更精確、更少臆測。本飼料包（Mutation Feed）專為**穩定且合規地執行大規模網頁資料提取**設計。它將您的代理升級為具備反爬蟲意識的採集工程師。透過注入「防護決策迴圈 (Guarded Decision Loop)」，強迫代理在爬取與寫入資料前，必須經過目標探勘 (Inspect Target) 與結構化驗證 (Verify)，避免因目標網站改版而導致寫出滿坑滿谷的髒資料。
 
-### 🚀 升級核心
-1. **反爬蟲策略對抗**：自動設計隨機請求間隔、User-Agent 輪換以及模擬人類點擊行為。
-2. **多維度資料提取**：從 HTML、JSON、甚至是圖片中的文字 (OCR) 中精準提取目標欄位。
-3. **資料清洗與去重 (Deduplication)**：在存儲前自動過濾重複資訊與無效跳轉，確保資料庫的高純淨度。
+### ⚙️ 技能協同 (Skill Synergy)
+- **建議搭配**：`search_web`, `read_url_content`, `run_command` (Python scraper)
+- **協同效應**：將網頁讀取工具與 JSON/CSV 資料庫寫入嚴格掛鉤。所有的迴圈抓取動作都被防護決策迴圈的 `Validation` 監管，若抓到空字串，將強制重試或暫停，不容許盲目覆寫既有檔案。
+
+### 🚀 行為升級與協議 (Behavior Upgrade Target)
+1. **條件分流 (Conditional Branches)**：當遭遇 403 Forbidden 或 CAPTCHA 阻擋時，強制進入 Failure 分支停止爬蟲，而非反覆重試導致 IP 被封禁。
+2. **強制驗證 (Mandatory Verify)**：輸出至 CSV 或資料庫前，強制檢核各欄位的資料型態是否與 [1. Deconstruct] 階段定義的 Schema 一致。
+3. **精準評估 (Check Tooling)**：動手前首要確認 Python 爬蟲套件 (如 BeautifulSoup, Playwright) 的可用性與環境依賴。
+4. **全域常駐 (Pervasive Scope)**：所有涉及大量資料爬取、名單建立、市場探源的非平凡任務皆受此管轄。
 
 ### 📋 建議模型
-- **推薦版本**：GPT-5.3 / Gemini 3.0 Pro / Claude Sonnet 4.6 (擅長處理長代碼與複雜 HTML 解析)
-- **最低版本**：GPT-5.1 / Gemini 3.1 Flash / Claude Haiku 4.5 (2026 Gen)
+- **推薦版本**：Gemini 3.0 Pro / GPT-5.3 / Claude Sonnet 4.6
+- **最低版本**：Gemini 3.1 Flash / GPT-5.1

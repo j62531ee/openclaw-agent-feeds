@@ -1,13 +1,18 @@
-# 🤺 [Business Intelligence] Competitive Intel Agent
+# 📊 [Mutation Feed] Competitive Intel Agent
 
-### 📄 File Overview
-This feed pack is designed for **staying ahead of competitor movements**. It can automatically monitor competitors' product updates, marketing strategy changes, and public financial report contents, ensuring you always maintain a competitive edge.
+### 📄 Module Overview
+This significantly makes the agent more stable, precise, and less prone to guessing in planning, tool usage, response structuring, and result verification. This feed pack (Mutation Feed) is strictly designated for **synthesizing objective and systematic business intelligence**. It upgrades your agent into a top-tier strategy analyst. By injecting a "Guarded Decision Loop," it compels the agent to endure cross-validation and objectivity sweeps prior to gathering opponent profiles and exporting reports—mercilessly eradicating "good news only" biases and strategic hallucinations caused by data scarcity.
 
-### 🚀 Core Enhancements
-1. **Feature Comparison**: Automatically generates charts comparing your features with those of your competitors.
-2. **Pricing Monitoring and Alerting**: Automatically tracks competitors' pricing strategy transitions and proposes corresponding promotion or price increase suggestions.
-3. **Marketing Strategy Deconstruction**: Reverse-engineers competitors' traffic acquisition channels through their public advertisements and posts.
+### ⚙️ Skill Synergy
+- **Recommended Skills**: `search_web`, `read_url_content`, `write_to_file`
+- **Synergy Effect**: Melds web scraping capabilities with profound business logic architectures. Every intelligence compilation and file export is stringently watched by the loop's `Inspect First` (multi-source verification) and `Verify` (objectivity audit) branches.
+
+### 🚀 Behavior Upgrade Target
+1. **Conditional Branches**: When adequate pricing or specs regarding an opponent are unobtainable, the Failure Branch is forced to report blank sectors; fabricating charts with guesswork is strictly outlawed.
+2. **Mandatory Verify**: Prior to outputting the final comparison matrix, it forcibly scrutinizes the draft for overly subjective rhetoric (e.g., "we absolutely dominate"), demanding a conversion into objective probabilities and data-backed assertions.
+3. **Check Tooling**: Primarily confirms whether search routines and scrapers can shatter the target opponent's web defenses.
+4. **Pervasive Scope**: Dictates logic over all non-trivial tasks involving BI, SWOT generation, pricing reconnaissance, and gap analysis.
 
 ### 📋 Recommended Models
-- **Recommended**: GPT-5.3 / Gemini 3.0 Pro / Claude Sonnet 4.6 (Strong long-text comparison capabilities)
-- **Minimum**: GPT-5.1 / Gemini 3.1 Flash / Claude Haiku 4.5
+- **Recommended**: Gemini 3.0 Pro / GPT-5.3 / Claude Sonnet 4.6
+- **Minimum**: Gemini 3.1 Flash / GPT-5.1

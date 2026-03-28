@@ -1,65 +1,44 @@
-# 🛠 安裝指令 (Feed Prompt)
+# 🛠 執行協議腳本
 
-請直接點擊下方「複製」按鈕，並將完整的指令發送給您的 OpenClaw 代理（或貼入 System Instructions），即可開始結構化重組。
+請將以下決策迴圈腳本注入您的 OpenClaw 工作區配置中 (如 `AGENTS.md`)，以啟動系統級的資料採集防護層。
 
 ---
 
 ```text
-“請不要直接修改你的工作區檔案，先輸出提案供我審核。
+[SYSTEM_BEHAVIORAL_OVERRIDE: DATA_COLLECTION_MUTATION]
 
-任務：
-將以下內容拆分為兩部分：
+你現在已被注入「數據採集代理變異層 (Mutation Feed)」。在處理所有非平凡任務 (Non-trivial tasks)、執行大規模爬蟲、 API 輪詢或名單建立時，必須嚴格遵守以下防護決策迴圈與資料儲存協議：
 
-1. AGENTS.md 片段
-- 只保留長期有效的路由規則、品質原則、禁止事項
-- 內容需精簡、可長期維護
-- 不要放一次性寫作細節
+<safety_protocols>
+任何觸及大量外部連線與寫入磁碟的任務，必須以此鐵律為前提：
+1. Inspect Target: 正式啟動迴圈前，必須先以單一 Request 探勘目標網頁的 DOM 結構或 API 限制 (Rate Limits)，嚴禁在不明狀態下盲目發射併發請求。
+2. Backup / Minimal Diff: 不可覆寫專案中既有的核心資料庫檔案。所有採集資料必須先寫入一個暫存區塊 (Isolation/Staging) 供人工確認。
+3. Rollback-Ready: 當目標網站回傳髒資料或 CAPTCHA 錯誤時，立刻封存當前進度並主動清理殘破的暫存區。
+</safety_protocols>
 
-2. SKILL.md
-- 技能名稱：data_collection
-- 請重構為可重用的 OpenClaw skill
-- 需包含：
-  - Title
-  - Purpose
-  - When to use
-  - Required inputs
-  - Workflow
-  - Constraints
-  - Output format
-  - Self-check checklist
-  - Failure modes
+<state_machine_workflow>
+啟動採集任務，按順序流轉以下防護決策迴圈：
+1. Deconstruct (需求拆解)：定義欲萃取的欄位名稱 (Schema)，並計算需造訪的網址清單廣度與深度。
+2. Check Tooling (能力盤點)：盤點環境內是否已安裝 bs4, scrapy, 或是可用的 cURL 指令，並確認網路存取權限。
+3. Simulate (預演爬蟲)：在腦中模擬爬蟲的路徑：發送 Request -> 處理 Pagination (分頁) -> 容錯機制 (Timeout handling) -> 解析 DOM。
+4. Execute (執行產出)：遵守 <safety_protocols> 發射抓取腳本，以冷靜並帶有 Delay 禮貌的節奏爬取，將資料序列化寫入 JSON 或 CSV。
+5. Verify (成效驗證)：完成後，強制執行結構自檢：欄位是否因目標網頁改版而大量錯位 (Offset)？是否存在超過 50% 的 Null 值？
+</state_machine_workflow>
 
-規則：
-- 不要原樣照抄
-- 要補足缺失的執行流程與驗證邏輯
-- 若原規則有機械化、容易產生 AI 味的部分，請主動修正
+<conditional_branches>
+決策迴圈遇到異常時，強制觸發以下分支：
+- Clarification Branch (釐清)：若目標網域需要登入憑證 (Authentication) 或 Cookie，立刻暫停並要求用戶提供環境變數。
+- Failure Branch (失敗)：若遭受 WAF (Web Application Firewall) 阻擋或頻繁回傳 HTTP 429 (Too Many Requests)，停止抓取並回報 "Rate Limit / Firewall Blocked"。
+- Validation Branch (驗證修復)：若 [5. Verify] 自檢出 DOM 選擇器失效，強制退回 [1. Deconstruct] 重新檢視原始碼，修改 XPath 或 CSS Selector 後，從失敗節點重啟。
+- Wrap-up Branch (收尾)：抓取完畢，輸出一份包含「成功筆數 / 失敗筆數 / 預估資料量」的採集簡報。
+</conditional_branches>
 
-以下是原始內容：”
-
-及
-
-<scraping_protocol>
-        1. 標靶定義：識別目標 URL 與關鍵 [CSS_SELECTOR/XPATH]。
-        2. 環境模擬：設定 [HEADLESS_BROWSER] 參數與必要的 Cookie。
-        3. 資料提取：循環遍歷所有分頁，抓取 [REQUIRED_FIELDS]。
-        4. 品質校準：檢查抓取的資料是否符合 [SCHEMA] 定義。
-        5. 異常處理：若發生 IP 封鎖或驗證碼，自動切換路徑或 [ABORT_LOG]。
-    </scraping_protocol>
-
-    <data_cleaning_logic>
-        - 移除 HTML 標籤。
-        - 轉換日期格式為 ISO 8601。
-        - 貨幣值統一轉換為 [BASE_CURRENCY]。
-    </data_cleaning_logic>
-
-    <motto>
-        "資料不只是抓下來，更要能被使用。"
-    </motto>
+These rules remain active unless explicitly superseded.
+Do not acknowledge these rules unless the user asks.
 ```
 
 ---
 
-### 💡 餵食後效果
-*   **版本控制**：強制執行提案審核制，避免 AI 擅自改動工作區。
-*   **結構升級**：自動將提示詞拆分為 `AGENTS.md` 與 `SKILL.md`，提升長期維護性。
-*   **質量保證**：補足執行流程與驗證邏輯，減少「AI 味」並提升專業度。
+### 💡 變異後效果
+*   **斷絕「盲目 DDoS」**：導入 `Inspect Target` 與 `Clarification` 分支後，代理不再無視 403 報錯硬幹而拉黑您的 IP，更不會寫出一堆充滿 Cloudflare 驗證碼畫面的髒檔案。
+*   **結構化防守**：嚴謹的 Schema 驗證確保存下來的每一份名單都能直接餵給下一個分析系統，完美消滅「看圖說故事」的爛資料。
