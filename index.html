@@ -66,18 +66,53 @@
         <!-- Vibrant Restoration Hero Section -->
         <section class="hero-section">
             <div class="container" data-aos="fade-up">
+                <span class="badge bg-warning text-dark mb-3 px-3 py-2 rounded-pill fs-6 shadow-sm"><i class="fas fa-bolt me-1"></i> 全面支援 OpenClaw v3.24 最新架構</span>
                 <h1 class="display-3 fw-bold">OpenClaw 龍蝦升級飼料包</h1>
-                <p class="mx-auto mt-4">
+                <p class="mx-auto mt-4 lead">
                     新手友善的 AI 代理行為升級系統 (Behavioral Upgrade System)。<br class="d-none d-md-block">
-                    作為 OpenClaw 工作區的安全變異層 (Safe Mutation Layer)，讓您的龍蝦代理變得更聰明、更精準、更穩定。
+                    作為 OpenClaw 工作區的安全變異層 (Safe Mutation Layer)，讓您的代理變得更聰明、更精準、更穩定。
                 </p>
+                <div class="mt-4 gap-3 d-flex justify-content-center flex-wrap">
+                    <a href="https://openclaw.icareu.tw/" target="_blank" class="btn btn-outline-light btn-lg rounded-pill px-4">
+                        <i class="fas fa-book-open me-2"></i>了解 OpenClaw v3.24
+                    </a>
+                    <a href="https://github.com/mkhsu2002/openclaw-agent-feeds" target="_blank" class="btn btn-primary btn-lg rounded-pill px-4 shadow-sm">
+                        <i class="fab fa-github me-2"></i>前往 GitHub Repo
+                    </a>
+                </div>
             </div>
         </section>
     </header>
 
     <!-- Main Content Area -->
     <main id="library" class="flex-grow-1">
-        <div class="container">
+        
+        <!-- Introduction Section -->
+        <section class="intro-section py-5 bg-light border-bottom">
+            <div class="container" data-aos="fade-up">
+                <div class="row text-center text-md-start align-items-center">
+                    <div class="col-md-6 mb-4 mb-md-0">
+                        <h3 class="fw-bold mb-3"><i class="fas fa-info-circle text-primary me-2"></i>什麼是「龍蝦飼料」？</h3>
+                        <p class="text-muted fs-5">本專案提供一系列預配置的 <strong>行為升級腳本 (Feeds)</strong>。您可以將其視為 OpenClaw 代理的「外掛晶片」，無需修改底層程式碼，只需透過通訊軟體指令「餵食」，即可賦予代理高階邏輯框架與極嚴格的操作護欄。</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm rounded-4">
+                            <div class="card-body p-4 text-start">
+                                <h5 class="fw-bold mb-3"><i class="fas fa-magic text-warning me-2"></i>如何使用 Feeds？</h5>
+                                <ol class="text-muted mb-0 ps-3 lh-lg">
+                                    <li>在下方的「飼料包 Buffet」中挑選所需的擴充能力。</li>
+                                    <li>點擊卡片閱讀 <strong>技術規格詳情</strong>。</li>
+                                    <li>點擊 <strong>「安裝指南」</strong>，複製變異指令 (Mutation Protocol)。</li>
+                                    <li>將指令貼給您的代理，或寫入工作區的 <code>AGENTS.md</code> 即可生效。</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container pt-4">
             <!-- Buffet Header Section -->
             <section class="buffet-header" data-aos="fade-up" data-aos-delay="100">
                 <h2 class="h2">飼料包 Buffet</h2>
