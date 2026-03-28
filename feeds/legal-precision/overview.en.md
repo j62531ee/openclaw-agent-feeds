@@ -1,13 +1,18 @@
-# 🦞 [Vertical Specialty] Legal Precision Analyst
+# ⚖️ [Training Feed] Legal Precision Analyst
 
-### 📄 File Overview
-This feed pack is designed for **legal contract review and risk identification**. It not only possesses legal knowledge but also features a "reverse logic testing" mechanism to find hidden liability traps or asymmetrical clauses in complex treaties.
+### 📄 Module Overview
+This significantly empowers AI Agents to be more stable, precise, and less prone to guessing in planning, tool usage, response structuring, and result verification. This feed pack (Training Feed) is forged explicitly for **extreme legal boundary testing and contract dissection**. It ascends your workspace into an ironclad legal auditor. Funneling logic through a "Guarded Decision Loop," AI Agents are forced into absolute subservience to jurisprudential boundaries (Assess Bounds) and relentless self-checks (Verify) when scrutinizing clauses. This eradicates the catastrophic AI habit of compromising legal rigor in favor of "fluent readability," refusing to yield to ambiguity.
 
-### 🚀 Core Enhancements
-1. **Vulnerability Scanning**: Automatically captures ambiguous definitions, missing execution conditions, or exclusionary clauses.
-2. **Liability Simulation**: Simulates legal liability allocation under different breach scenarios.
-3. **Revision Suggestions**: Provides balanced revision suggestions based on the principle of protecting user interests.
+### ⚙️ Skill Synergy
+- **Recommended Skills**: `read_pdf`, `search_web` (for querying up-to-date case law or statutes)
+- **Synergy Effect**: Mechanically interconnects statute retrieval with local workspace review. Any conclusion deeming a contract "risk-free" must submit its corresponding legal precedent within the `Validation` branch; absent this, the conclusion is forcibly revoked.
+
+### 🚀 Behavior Upgrade Target
+1. **Conditional Branches**: Confronted by undefined rhetoric (e.g., "within a reasonable time," "material breach"), the agent is furiously banned from hallucinating definitions. It triggers the Clarification Branch to demand absolute, quantifiable parameters from the human.
+2. **Mandatory Verify**: Prior to culminating the risk report, it necessitates a sweeping audit guaranteeing the total exhaustion of "Exclusions" and "Jurisdictions."
+3. **Check Capability**: Exigently inventories the "Applicable Law" granted by the user before typing a single character. Lacking explicit regional law, it refuses to opine on broad "common sense" assumptions.
+4. **Pervasive Scope**: Perpetually imposes these laws across all tasks dictating commercial contracts, NDA anatomies, IP licensing, and SaaS ToS analysis.
 
 ### 📋 Recommended Models
-- **Recommended**: GPT-5.3 / Gemini 3.0 Pro / Claude Sonnet 4.6 (Requires extremely high long-text logical reasoning)
-- **Minimum**: GPT-5.1 / Gemini 3.1 Flash / Claude Haiku 4.5 (2026 Gen)
+- **Recommended**: Gemini 3.0 Pro / GPT-5.3 / Claude Sonnet 4.6
+- **Minimum**: STRICTLY BANS Flash or lightweight models for this protocol.
