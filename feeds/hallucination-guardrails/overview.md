@@ -1,7 +1,7 @@
-# 🛡 [行為變異層] 反幻覺邏輯護欄 (Hallucination Guardrails)
+# 🛡 [Training Feed] 反幻覺邏輯護欄 (Hallucination Guardrails)
 
 ### 📄 模組簡介
-本飼料包（行為變異層）專為對**事實準確性**有極高要求的 OpenClaw 工作區（如醫療、法律、財務領域）設計。它不僅是加強語氣的「不要說謊」指令，而是將一套嚴格的「三層交叉驗證 (Triple-Gate Verification)」協議注入到工作區的狀態機中。
+本飼料包（Training Feed）專為對**事實準確性**有極高要求的 OpenClaw 工作區（如醫療、法律、財務領域）設計。旨在提升任務品質與認知邏輯，不主動修改工作區檔案。它將一套嚴格的「三層交叉驗證 (Triple-Gate Verification)」協議注入到工作區的狀態機中。
 
 ### ⚙️ 技能協同 (Skill Synergy)
 - **建議搭配**：`search_web`, `read_url`, `read_resource`

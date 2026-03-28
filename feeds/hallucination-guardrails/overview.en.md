@@ -1,7 +1,7 @@
-# 🛡 [Behavioral Mutation] Hallucination Guardrails
+# 🛡 [Training Feed] Hallucination Guardrails
 
 ### 📄 Module Overview
-This feed pack (behavioral mutation layer) is designed for OpenClaw workspaces with **extremely high requirements for factual accuracy** (such as medical, legal, and financial). It is not just a simple "don't lie" instruction, but injects a strict "Triple-Gate Verification" protocol into the workspace's state machine.
+This feed pack (Training Feed) is designed for OpenClaw workspaces with **extremely high requirements for factual accuracy**. It is meant to improve task quality and cognitive logic without actively modifying workspace files. It injects a strict "Triple-Gate Verification" protocol into the workspace's state machine.
 
 ### ⚙️ Skill Synergy
 - **Recommended Skills**: `search_web`, `read_url`, `read_resource`

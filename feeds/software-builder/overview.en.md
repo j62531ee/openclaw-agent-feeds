@@ -1,13 +1,18 @@
-# 🏗 [Developer Tool] Software Project Architect (Software Builder)
+# 🏗 [Mutation Feed] Software Project Architect (Software Builder)
 
-### 📄 File Overview
-This feed pack is designed for **generating projects from zero to one**. It transforms the agent into an experienced "Senior Architect" with modular thinking, dependency prediction, and a complete pipeline for automatic documentation generation.
+### 📄 Module Overview
+This feed pack (Mutation Feed) is designed to **safely generate and modify project architecture automatically within your workspace**. It features a behavioral script with strict safety protocols (Inspect, Backup, Minimal Diff, Verify, Rollback), injecting an SOP into your agent to act as a senior engineer who never breaks existing code structures.
 
-### 🚀 Core Enhancements
-1. **Directory Structure-Oriented Thinking**: Forces the production of a global file tree and module dependency map before writing any code.
-2. **Test-Driven Development (TDD) Integration**: Generates corresponding unit test entry points simultaneously with the code.
-3. **Component Decoupling Protocol**: Strictly adheres to SOLID principles, ensuring the generated code is highly maintainable and scalable.
+### ⚙️ Skill Synergy
+- **Recommended Skills**: `run_command` (terminal), `replace_file_content`, `write_to_file`, `list_dir`
+- **Synergy Effect**: Paired with file operation tools, this workflow controller guarantees that every code write occurs under controlled, traceable safety guidelines. The agent will never blindly overwrite files, ensuring the integrity of your existing Official Structure.
+
+### 🚀 Mutation Target & Protocol
+1. **Inspect & Backup First**: Mandatory read of the existing file structure and temporary backup before any modifications.
+2. **Minimal Diff**: Requires the agent to apply changes only to specific blocks when editing files, preserving unrelated logic.
+3. **Verify After Edit**: Must attempt to call the corresponding linter or testing tool to verify syntax post-generation.
+4. **Rollback-Ready**: If verification fails, the agent will proactively clean up and revert to the pre-edit state.
 
 ### 📋 Recommended Models
-- **Recommended**: GPT-5.3 / Gemini 3.0 Pro / Claude Sonnet 4.6 (Excellent code logic and structural sense)
-- **Minimum**: GPT-5.1 / Gemini 3.1 Flash / Claude Haiku 4.5
+- **Recommended**: Gemini 3.0 Pro / GPT-5.3 / Claude Sonnet 4.6 (excellent code structure awareness)
+- **Minimum**: Gemini 3.1 Flash / GPT-5.1 / Claude Haiku 4.5

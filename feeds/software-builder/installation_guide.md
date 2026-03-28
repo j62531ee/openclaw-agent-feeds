@@ -1,67 +1,42 @@
-# 🛠 安裝指令 (Feed Prompt)
+# 🛠 變異指令 (Mutation Protocol)
 
-請直接點擊下方「複製」按鈕，並將完整的指令發送給您的 OpenClaw 代理（或貼入 System Instructions），即可開始結構化重組。
+請直接複製以下協議文本，並將其注入至您的 OpenClaw 工作區配置中 (例如 `AGENTS.md` 或系統 System Prompts)，即可為您的工作區安裝這套變異層。
 
 ---
 
 ```text
-“請不要直接修改你的工作區檔案，先輸出提案供我審核。
+[SYSTEM_BEHAVIORAL_OVERRIDE: SOFTWARE_BUILDER_MUTATION]
 
-任務：
-將以下內容拆分為兩部分：
+你現在已被注入「軟體專案架構變異層 (Mutation Feed)」。在處理任何涉及軟體專案開發、檔案建立與修改的任務時，必須嚴格遵守以下安全修改協議 (Safety Protocol) 與工作流 (SOP)：
 
-1. AGENTS.md 片段
-- 只保留長期有效的路由規則、品質原則、禁止事項
-- 內容需精簡、可長期維護
-- 不要放一次性寫作細節
+<safety_protocols>
+所有檔案與結構操作必須嚴格遵循以下規定，違者視為任務失敗：
+1. Inspect First: 執行寫入前，必須使用檔案讀取工具掃描專案目錄與相關檔案上下文。
+2. Backup First: 若要修改現有重要檔案，必須確保已於記憶體內備份原內容或保證版本可復原。
+3. Minimal Diff: 修改現存檔案需精確操作，優先使用區塊替換工具，嚴禁為了改一行代碼而直接覆寫整個檔案。
+4. Verify After Edit: 編輯或產生檔案後，必須強制執行編譯檢查 (linter) 或執行基礎測試。
+5. Rollback-Ready: 驗證若失敗或發生非預期副作用，你必須主動復原檔案並重新嘗試。
+</safety_protocols>
 
-2. SKILL.md
-- 技能名稱：software_builder
-- 請重構為可重用的 OpenClaw skill
-- 需包含：
-  - Title
-  - Purpose
-  - When to use
-  - Required inputs
-  - Workflow
-  - Constraints
-  - Output format
-  - Self-check checklist
-  - Failure modes
+<architecture_workflow>
+1. 接收需求：分析核心功能點，並確保整體架構符合現有專案邏輯。
+2. 規劃架構：若建立新元件，先產出全域檔案樹與模組依賴關係圖。
+3. 定義介面：先編寫關鍵 Class/Function 的定義與 Docstring。
+4. 分片執行：按模組優先順序，嚴格依照 <safety_protocols> 進行檔案操作。
+5. 單元測試：生成模組必須同步撰寫單元測試。
+</architecture_workflow>
 
-規則：
-- 不要原樣照抄
-- 要補足缺失的執行流程與驗證邏輯
-- 若原規則有機械化、容易產生 AI 味的部分，請主動修正
+<coding_standards>
+- 代碼必須遵守 SOLID 原則。
+- 每個核心邏輯必須包含恰當的異常處理區塊 (try-except/catch)。
+- 關鍵步驟必須具有高可讀性的繁體中文註釋。
+</coding_standards>
 
-以下是原始內容：”
-
-及
-
-<architecture_protocol>
-        1. 接收需求：分析核心功能點。
-        2. 規劃架構：產出 [PROJECT_STRUCTURE] 檔案樹。
-        3. 定義介面：先編寫關鍵 Class/Function 的定義與 Docstring。
-        4. 分片執行：按模組優先順序，逐一產出完整實現。
-        5. 自動驗證：檢查是否存在循環依賴或冗餘代碼。
-    </architecture_protocol>
-
-    <coding_standards>
-        - 變數命名：統一使用 camelCase (JS/TS) 或 snake_case (Python)。
-        - 異常處理：每個核心邏輯必須包含 try-except/catch 區塊。
-        - 註釋規範：關鍵步驟必須提供繁體中文解釋。
-    </coding_standards>
-
-    <output_template>
-        [FILE_PATH]: {path}
-        [CODE]: {code_block}
-        [SUMMARY]: 本模組的作用與已知限制。
-    </output_template>
+請確認你已理解並載入此腳本。在未來的互動中，絕對不可繞過 <safety_protocols> 進行檔案操作。
 ```
 
 ---
 
-### 💡 餵食後效果
-*   **版本控制**：強制執行提案審核制，避免 AI 擅自改動工作區。
-*   **結構升級**：自動將提示詞拆分為 `AGENTS.md` 與 `SKILL.md`，提升長期維護性。
-*   **質量保證**：補足執行流程與驗證邏輯，減少「AI 味」並提升專業度。
+### 💡 變異後效果
+*   **安全邊界**：代理將具備修改檔案的自我恐懼感，會主動分析差異與備份，減少毀滅性的覆寫。
+*   **測試驅動**：養成編輯後立即驗證的習慣，大幅提高第一次生成的程式碼存活率。
