@@ -1,13 +1,18 @@
-# 🦞 [Core Upgrade] Lobster Deterministic Framework
+# 🛡 [Training Feed] OpenClaw Deterministic Framework
 
-### 📄 File Overview
-This feed pack is specifically designed for AI Agents that require **extremely high output stability** and **rigorous logic**. By establishing "mental guardrails" and "decision loop logic," it minimizes LLM uncertainty.
+### 📄 Module Overview
+This significantly makes the agent more stable, precise, and less prone to guessing in planning, tool usage, response structuring, and result verification. This feed pack (Training Feed) is forged explicitly for scenarios demanding **extreme execution precision**. By hardening the agent's workflow into a "Guarded Decision Loop", it aggressively eliminates improvisational generation and randomness, guaranteeing that identical contexts invariably yield consistent deterministic reports and decisions.
 
-### 🚀 Core Enhancements
-1. **Logic Gates**: Forces the agent to perform self-checks before outputting.
-2. **XML Structured Packaging**: Uses XML tags to isolate the thinking process from the final output.
-3. **Zero-Hallucination Constraints**: Strictly limits the agent to extracting information only from the provided context.
+### ⚙️ Skill Synergy
+- **Recommended Skills**: Applicable across all knowledge retrieval and logical analysis modules.
+- **Synergy Effect**: The agent must subject itself to a strict deduction tree prior to Executing any tool. If a tool times out or errors mid-process, the agent accurately triggers fail-safes instead of hallucinating patches to cover loopholes.
+
+### 🚀 Behavior Upgrade Target
+1. **Conditional Branches**: Replaces vague "maybe we can try this" inferences with definitive IF-THEN-ELSE failure and clarification branches.
+2. **Mandatory Verify**: Compels a rigorous comparison between the "input variables" and the "output results" to confirm a tight, strictly reasoned causal relationship before exporting.
+3. **Check Capability**: Upon task initiation, it audits whether present information satisfies executable conditions; acting is forbidden if thresholds remain unmet.
+4. **Pervasive Scope**: Perpetually active while addressing non-trivial tasks, mathematical operations, or data auditing.
 
 ### 📋 Recommended Models
-- **Recommended**: GPT-5.3 / Gemini 3.0 Pro / Claude Sonnet 4.6
-- **Minimum**: GPT-5.1 / Gemini 3.1 Flash / Claude Haiku 4.5 (2026 Gen)
+- **Recommended**: Gemini 3.0 Pro / GPT-5.3 / Claude Sonnet 4.6
+- **Minimum**: Gemini 3.1 Flash / GPT-5.1

@@ -1,13 +1,18 @@
-# ✍️ [Developer Tool] Doc Generator Agent
+# 📚 [Mutation Feed] Doc Generator
 
-### 📄 File Overview
-This feed pack is designed to **reduce the documentation burden for developers**. It precisely parses source code logic to automatically generate API references, system architecture diagrams, and installation manuals. It is not just a comment translator, but a deep translation of code intent.
+### 📄 Module Overview
+This significantly makes the agent more stable, precise, and less prone to guessing in planning, tool usage, response structuring, and result verification. This feed pack (Mutation Feed) serves exclusively to **safely and accurately reverse-engineer documentation**. It upgrades your agent into a meticulous Technical Writer. By interlacing a "Guarded Decision Loop," it compels the agent to perform an exhaustive source-code scan and structural rehearsal prior to generating APIs or READMEs, thoroughly annihilating common "documentation hallucinations."
 
-### 🚀 Core Enhancements
-1. **Dependency Relationship Auto-Mapping**: Automatically labels call relationships between modules.
-2. **Multi-Format Output Support**: Supports Markdown, Swagger/OpenAPI, and Mermaid diagrams.
-3. **Technical Debt Detection**: Indexes missing comments or complex logic while generating documentation.
+### ⚙️ Skill Synergy
+- **Recommended Skills**: `list_dir`, `view_file`, `write_to_file`
+- **Synergy Effect**: Closely binds file-reading tools with text-generation logic. Every write operation is watched with a hawk's eye by the loop's `Inspect First` and `Verify` branches—refusing to permit blind guesses regarding class or method parameters.
+
+### 🚀 Behavior Upgrade Target
+1. **Conditional Branches**: Confronted with obfuscated code or absent pivotal comments, it forces the Clarification Branch to interrogate the developer rather than fabricating spurious variable titles.
+2. **Mandatory Verify**: Prior to generating the Markdown, it dictates a rigorous regression securing that every documented function signature aligns 100% identically with the raw source files.
+3. **Check Tooling**: As a preliminary strike, it audits whether its faculties can successfully traverse the codebase's AST (Abstract Syntax Tree) and absorb the localized Domain Knowledge.
+4. **Pervasive Scope**: Perpetually maintains dominance when addressing non-trivial tasks spanning standardizations, API manual compositions, or Changelog distributions.
 
 ### 📋 Recommended Models
-- **Recommended**: GPT-5.3 / Gemini 3.0 Pro / Claude Sonnet 4.6 (Extremely precise verbal expression)
-- **Minimum**: GPT-5.1 / Gemini 3.1 Flash / Claude Haiku 4.5
+- **Recommended**: Gemini 3.0 Pro / GPT-5.3 / Claude Sonnet 4.6
+- **Minimum**: Gemini 3.1 Flash / GPT-5.1
