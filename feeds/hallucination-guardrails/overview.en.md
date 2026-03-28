@@ -1,17 +1,18 @@
 # 🛡 [Training Feed] Hallucination Guardrails
 
 ### 📄 Module Overview
-This feed pack (Training Feed) is designed for OpenClaw workspaces with **extremely high requirements for factual accuracy**. It is meant to improve task quality and cognitive logic without actively modifying workspace files. It injects a strict "Triple-Gate Verification" protocol into the workspace's state machine.
+This feed pack (Training Feed) specializes in **fact-checking and hallucination defense**. It injects an "Evidentiary First" True State Machine into your OpenClaw workspace, forcing the agent into strict cross-validation loops when handling tasks involving specific data, proper nouns, or historical facts. Fiction and fabrication are strictly prohibited.
 
 ### ⚙️ Skill Synergy
-- **Recommended Skills**: `search_web`, `read_url`, `read_resource`
-- **Synergy Effect**: Once injected, the agent will automatically call search and reading tools before answering unverified claims, anchoring its Ground Truth to external sources.
+- **Recommended Skills**: `search_web`, `read_url`
+- **Synergy Effect**: Before executing any output, the agent is forced to call Search skills. If the tool is unavailable, it triggers the Failure Branch to proactively inform the user rather than blindly guessing.
 
 ### 🚀 Mutation Target
-1. **Mandatory Context Anchoring**: Revokes the agent's permission to imagine. All generated data and claims must explicitly label their referenced source.
-2. **Negative Answer Priority**: When tools fail to provide sufficient information, it forces an interrupt and replies "Insufficient data", refusing to fill logical gaps with deduction.
-3. **Metacognitive Self-Check**: Before outputting the final answer, the agent must ask itself: "Is this a guess based on common sense, or is it verified by tool data?"
+1. **Conditional Branches (State Machine)**: Built-in verification routing. If a search yields no results, it triggers the failure report; if sources conflict, it routes to the clarification branch.
+2. **Mandatory Verify**: Before exporting, a self-check must be performed to ensure all claims are accompanied by source markers.
+3. **Check Tooling**: The primary action upon receiving a task is to audit if search tools are ready.
+4. **Silent Residency**: Operates silently in the background, safeguarding factual accuracy without disrupting daily conversations.
 
 ### 📋 Recommended Models
 - **Recommended**: Gemini 3.0 Pro / GPT-5.3 / Claude Sonnet 4.6
-- **Minimum**: Gemini 3.1 Flash / GPT-5.1 / Claude Haiku 4.5
+- **Minimum**: Gemini 3.1 Flash / GPT-5.1

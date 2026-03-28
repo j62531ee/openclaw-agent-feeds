@@ -1,16 +1,17 @@
 # 🥦 [Mutation Feed] AI SEO Content Factory
 
 ### 📄 Module Overview
-This feed pack (Mutation Feed) is designed for **safely automating the production of high-ranking content**. Rather than just generating text, it embeds the critical SEO logic of **E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness)** and strict file operation guardrails deep into the AI agent's workflow. This is a standardized business workflow SOP controller.
+This feed pack (Mutation Feed) is designed for **safely automating high-ranking content production**. It upgrades the agent's writing workflow into a "research-first, write-second" True State Machine, forcefully intertwining E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) logic with strict file-writing guardrails, strictly forbidding the agent from hallucinating when content runs dry.
 
 ### ⚙️ Skill Synergy
 - **Recommended Skills**: `search_web`, `read_url`, `write_to_file`
-- **Synergy Effect**: Before generating content, the agent is forced to call Search skills to investigate references and analyze competitors. Once generated, the output is safely written to the specified project directory via controlled file-writing tools.
+- **Synergy Effect**: The agent is strictly mandated to call Search skills before generating content. If insufficient competitor intelligence is gathered, the Failure branch triggers an instruction to re-assess keywords. File writing is confined by Mutation guardrails.
 
-### 🚀 Mutation Target & Protocol
-1. **Research Before Writing (Inspect First)**: Enforces a three-step process of "Keyword Search -> Competitor Analysis -> SEO Structure Planning", strictly prohibiting blind writing.
-2. **Safe Writing (Verify After Edit)**: The generated Markdown file must pass an SEO self-check (e.g., heading density, word count). If it fails, the agent must proactively rewrite it to prevent low-quality content from entering the workspace.
-3. **E-E-A-T Validation**: Forces the agent to audit whether the article contains credible data citations and clear professional insights.
+### 🚀 Mutation Target
+1. **Conditional Branches (State Machine)**: When results for a designated keyword are lacking or contradictory, it triggers the Clarification branch to realign with the user.
+2. **Mandatory Verify**: Upon outputting Markdown, it is forced to self-verify against hollow data and ensure H3 tag hierarchies haven't spiraled out of control.
+3. **Check Tooling**: Upon receiving a task, primarily ensure file-writing permissions and Search APIs are active.
+4. **Pervasive Scope**: Governs all non-trivial tasks involving "long-form writing, SEO optimization, and content marketing."
 
 ### 📋 Recommended Models
 - **Recommended**: Gemini 3.0 Pro / GPT-5.3 / Claude Sonnet 4.6

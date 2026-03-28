@@ -1,17 +1,18 @@
 # 🛡 [Training Feed] 反幻覺邏輯護欄 (Hallucination Guardrails)
 
 ### 📄 模組簡介
-本飼料包（Training Feed）專為對**事實準確性**有極高要求的 OpenClaw 工作區（如醫療、法律、財務領域）設計。旨在提升任務品質與認知邏輯，不主動修改工作區檔案。它將一套嚴格的「三層交叉驗證 (Triple-Gate Verification)」協議注入到工作區的狀態機中。
+本飼料包（Training Feed）專精於**事實查核與防禦幻覺**。它為您的 OpenClaw 工作區注入了「查證優先」的真實狀態機 (True State Machine)，強制代理在處理包含具體數據、名詞或歷史事實的任務時，必須進入嚴格的交叉驗證迴圈，絕不憑空捏造。
 
 ### ⚙️ 技能協同 (Skill Synergy)
-- **建議搭配**：`search_web`, `read_url`, `read_resource`
-- **協同效應**：當代理接收到本協議後，會在回答未經驗證的主張前，主動呼叫搜尋與讀取工具，將外部來源作為「Ground Truth」。
+- **建議搭配**：`search_web`, `read_url`
+- **協同效應**：代理在 Execute 之前，必須強制調用 Search 技能。若工具不可用，將觸發 Failure Branch 主動告知用戶，而不會嘗試盲目作答。
 
-### 🚀 變異目標 (Mutation Target)
-1. **Context 強制錨定**：封存代理的任意發揮權限。所有生成的數據與主張，必須明確標示對應的參考來源。
-2. **否定性回答優先**：當工具無法提供足夠資訊時，強制觸發中斷，並回覆「資料不足」，拒絕以邏輯推演填補空白。
-3. **元認知自檢**：代理在輸出最終答案前，必須進行自問自答：「這是我基於常識的猜測，還是來自工具數據的證實？」
+### 🚀 變異目標與協議 (Mutation Target)
+1. **條件分流 (Conditional Branches)**：內建完整的查核分支。若搜尋無結果，直接進入失敗回報；若多方資訊衝突，進入釐清分支。
+2. **強制驗證 (Mandatory Verify)**：輸出前必須自檢所有「宣稱 (Claims)」是否附有來源標記。
+3. **精準評估 (Check Tooling)**：接收任務後首要動作是盤點搜尋工具是否就緒。
+4. **靜默運行 (Silent Residency)**：底層常駐不干擾日常對話，默默守護事實底部。
 
 ### 📋 建議模型
 - **推薦版本**：Gemini 3.0 Pro / GPT-5.3 / Claude Sonnet 4.6
-- **最低版本**：Gemini 3.1 Flash / GPT-5.1 / Claude Haiku 4.5
+- **最低版本**：Gemini 3.1 Flash / GPT-5.1

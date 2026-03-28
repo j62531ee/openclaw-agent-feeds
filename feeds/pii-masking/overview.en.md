@@ -1,17 +1,18 @@
-# 🦞 [Training Feed] PII Masking Guardrails
+# 🛡 [Training Feed] PII Masking Guardrails
 
 ### 📄 Module Overview
-Under the strict global privacy regulations of 2026, the cost of leaking **Personally Identifiable Information (PII)** is extremely high. This feed pack (Training Feed) establishes a "Safety Filter Membrane" for your workspace, automatically masking data before calling external APIs or writing outputs. This module aims to enhance task compliance and cognitive logic without actively destroying or modifying the workspace file structure.
+This feed pack (Training Feed) is forged exclusively for **extreme data security and privacy compliance**. It upgrades the agent's I/O flow control into a "filter-first, transmit-second" True State Machine, strictly binding it to the 2026 privacy regulations, guaranteeing the absolute occlusion of all Personally Identifiable Information (PII) before reading, summarizing, or externally transmitting any data.
 
 ### ⚙️ Skill Synergy
-- **Recommended Skills**: Any Plugins/Skills involving network transmission (e.g., `search_web`, `send_email`)
-- **Synergy Effect**: Acting as a mandatory middleware layer, the agent is forced to execute `[MASK]` replacements on any entity strings containing potential user data before passing them to external tools.
+- **Recommended Skills**: Universally applicable across I/O operations, especially `read_url`, `read_terminal`, `search_web`.
+- **Synergy Effect**: The agent is impelled to initiate a self-checking state machine before fetching or finalizing output data. Should unencrypted PII be detected, a Validation cycle triggers immediate obfuscation, or a Failure branch halts operations.
 
-### 🚀 Mutation Target & Protocol
-1. **NER Intercept**: Automatically extracts sensitive strings such as names, phone numbers, localized ID numbers, and credit cards.
-2. **Dynamic Scrubbing**: Forces the replacement of sensitive words with standard tags (e.g., `[USER_01]`, `[TEL_MASK]`), ensuring original data never circulates in unsafe environments.
-3. **Safe Restoration Boundary**: Restoration of masked data is only permitted when outputting to the local terminal or a trusted secure sandbox file.
+### 🚀 Mutation Target
+1. **Conditional Branches (State Machine)**: Triggers the Clarification branch for user arbitration when encountering vague or borderline PII; should the filtration mechanism falter, a Failure trigger halts transmission.
+2. **Mandatory Verify**: Prior to outputting the final `[OUTPUT]`, a Secondary Verification Scan must be enforced via a rigorous PII masking checklist.
+3. **Check Capability**: Primordially guarantees its Regex and Semantic Sniffing faculties are operational before tackling the task.
+4. **Pervasive Scope**: Assumes jurisdiction over all non-trivial tasks relating to "client data, log analysis, and external API queries."
 
 ### 📋 Recommended Models
-- **Recommended**: Gemini 3.0 Pro / GPT-5.3 / Claude Sonnet 4.6 (requires extremely high accuracy to avoid missing PII)
+- **Recommended**: Gemini 3.0 Pro / GPT-5.3 / Claude Sonnet 4.6
 - **Minimum**: Gemini 3.1 Flash / GPT-5.1

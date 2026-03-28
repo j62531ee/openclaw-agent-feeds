@@ -1,16 +1,17 @@
 # 🧪 [Mutation Feed] 自主研究引擎 (Autonomous Research Engine)
 
 ### 📄 模組簡介
-本飼料包（Mutation Feed）專為需要**深度資料挖掘**與**資訊驗證寫出**的任務設計。它能將您的 OpenClaw 工作區裝載「迭代驗證與安全報告生成」的 SOP 流程控制器。
+本飼料包（Mutation Feed）專為**深度資料挖掘與安全報告寫入**設計。它將代理升級為具備「交叉驗證狀態機」的研究員。遇不一致資訊時，狀態機會主動介入進行二次查核，並遵循寫檔協議安全地產出研究報告。
 
 ### ⚙️ 技能協同 (Skill Synergy)
 - **建議搭配**：`search_web`, `read_url`, `write_to_file`, `list_dir`
-- **協同效應**：透過強制調用搜尋工具進行初步與後續交叉驗證，並在資料確鑿後，遵循寫檔安全協議產生研究報告，絕不干擾專案核心代碼。
+- **協同效應**：將檢索工具無縫嵌入 Verify 狀態中，確保只有拿到雙重驗證的黃金資訊 `[VERIFIED_SRC]` 才能進入 Execute 報告環節，且絕不干擾專案核心代碼。
 
-### 🚀 變異目標與協議 (Mutation Protocol)
-1. **安全報告寫入 (Inspect & Backup First)**：確保產出的研究報告僅限於指定資料夾，若需更新必須先進入備份防呆確認。
-2. **三階段驗證法**：強制執行 檢索 -> 交叉比對 -> 衝突解決 的狀態機迴圈。
-3. **資訊預警 (Rollback-Ready)**：當資訊不足以支撐結論且無法查證時，強制觸發回溯與中斷邏輯，終止寫入並通知用戶。
+### 🚀 變異目標與協議 (Mutation Target)
+1. **條件分流 (Conditional Branches)**：當出現互相矛盾的報表數據時，觸發 Clarification/Validation 分支以解決衝突。
+2. **強制驗證 (Mandatory Verify)**：每匯入一項關鍵數據，都必須自查第二消息來源；寫檔完畢後也需驗證參考清單是否存在。
+3. **精準評估 (Check Tooling)**：強制先檢查本地是否已有舊報告 (`Inspect First`) 以及聯網技能。
+4. **全域常駐 (Pervasive Scope)**：處理任何非平凡的情報收集、資料分析或長篇研究報告時生效。
 
 ### 📋 建議模型
 - **推薦版本**：Gemini 3.0 Pro / GPT-5.3 / Claude Sonnet 4.6

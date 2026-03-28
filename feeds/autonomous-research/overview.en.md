@@ -1,16 +1,17 @@
 # 🧪 [Mutation Feed] Autonomous Research Engine
 
 ### 📄 Module Overview
-This feed pack (Mutation Feed) is designed for tasks that require **deep data mining** and **safe report generation**. It equips your OpenClaw workspace with an SOP workflow controller for "iterative validation and guarded report creation."
+This feed pack (Mutation Feed) caters to tasks demanding **deep data mining and safe report writing**. It upgrades the agent into a researcher possessing a "Cross-Validation State Machine." Upon encountering inconsistent data, the state machine proactively intervenes to conduct secondary verifications, safely generating reports while strictly adhering to file-writing protocols.
 
 ### ⚙️ Skill Synergy
 - **Recommended Skills**: `search_web`, `read_url`, `write_to_file`, `list_dir`
-- **Synergy Effect**: Forces the use of search tools for preliminary and subsequent cross-verification. Once the data is rock-solid, it generates a research report obeying strict file-writing safety protocols, guaranteeing no interference with core project code.
+- **Synergy Effect**: Seamlessly embeds retrieval tools within the Verify state, ensuring only double-verified golden information `[VERIFIED_SRC]` permeates into the Execute report phase, averting any interference with core project code.
 
-### 🚀 Mutation Target & Protocol
-1. **Safe Report Execution (Inspect & Backup First)**: Ensures generated research reports are confined to designated folders. Updates to existing reports require mandatory pre-backup checks.
-2. **Tri-Stage Verification**: Forces a state machine loop: Retrieval -> Cross-Referencing -> Conflict Resolution.
-3. **Information Alert (Rollback-Ready)**: When information is insufficient to support a conclusion and cannot be verified, it triggers rollback logic to suspend writing and notifies the user.
+### 🚀 Mutation Target
+1. **Conditional Branches (State Machine)**: Triggers the Clarification/Validation branch to resolve conflicts when contradictory data points arise.
+2. **Mandatory Verify**: A secondary source must be checked for every critical datapoint imported; upon completing the file, the presence of a reference list must be verified.
+3. **Check Tooling**: Mandates an initial scan to check if a prior report exists locally (`Inspect First`) and assesses networking skills.
+4. **Pervasive Scope**: Activates upon handling any non-trivial intelligence gathering, data analysis, or extensive research reports.
 
 ### 📋 Recommended Models
 - **Recommended**: Gemini 3.0 Pro / GPT-5.3 / Claude Sonnet 4.6

@@ -1,18 +1,18 @@
-# 🏗 [Mutation Feed] Software Project Architect (Software Builder)
+# 🏗 [Mutation Feed] Software Project Architect
 
 ### 📄 Module Overview
-This feed pack (Mutation Feed) is designed to **safely generate and modify project architecture automatically within your workspace**. It features a behavioral script with strict safety protocols (Inspect, Backup, Minimal Diff, Verify, Rollback), injecting an SOP into your agent to act as a senior engineer who never breaks existing code structures.
+This feed pack (Mutation Feed) is designed specifically for **safely generating and modifying project architecture**. It upgrades your agent into a senior engineer equipped with a "fool-proof state machine." Before writing any code, it must pass through extremely rigorous Assess, Backup, Minimal Diff, and Validation flows, completely eliminating the tragedy of breaking standard projects.
 
 ### ⚙️ Skill Synergy
-- **Recommended Skills**: `run_command` (terminal), `replace_file_content`, `write_to_file`, `list_dir`
-- **Synergy Effect**: Paired with file operation tools, this workflow controller guarantees that every code write occurs under controlled, traceable safety guidelines. The agent will never blindly overwrite files, ensuring the integrity of your existing Official Structure.
+- **Recommended Skills**: `run_command`, `replace_file_content`, `list_dir`
+- **Synergy Effect**: Integrates file modification tools with a strict vetting state machine. All `write`/`replace` actions are tightly monitored by the `Verify` and `Rollback` branches of the state machine.
 
-### 🚀 Mutation Target & Protocol
-1. **Inspect & Backup First**: Mandatory read of the existing file structure and temporary backup before any modifications.
-2. **Minimal Diff**: Requires the agent to apply changes only to specific blocks when editing files, preserving unrelated logic.
-3. **Verify After Edit**: Must attempt to call the corresponding linter or testing tool to verify syntax post-generation.
-4. **Rollback-Ready**: If verification fails, the agent will proactively clean up and revert to the pre-edit state.
+### 🚀 Mutation Protocol
+1. **Validation Loop**: After finalizing modifications, it must summon Linters or compile tests. Failure directly triggers the Rollback-Ready mechanism.
+2. **Conditional Branches**: Triggers the Clarification Branch to suspend actions upon discovering vague package dependencies or unclear project structures.
+3. **Check Capability**: Strictly assesses whether it holds sufficient contextual understanding before executing a Minimal Diff.
+4. **Pervasive Scope**: Applicable to all non-trivial tasks involving file creation, modification, or code writing.
 
 ### 📋 Recommended Models
-- **Recommended**: Gemini 3.0 Pro / GPT-5.3 / Claude Sonnet 4.6 (excellent code structure awareness)
-- **Minimum**: Gemini 3.1 Flash / GPT-5.1 / Claude Haiku 4.5
+- **Recommended**: Gemini 3.0 Pro / GPT-5.3 / Claude Sonnet 4.6
+- **Minimum**: Gemini 3.1 Flash / GPT-5.1
